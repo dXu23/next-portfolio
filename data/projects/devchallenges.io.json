@@ -1,0 +1,132 @@
+[
+    {
+        "title": "Team Page",
+        "description": "Developer team page.",
+        "tags": [
+            "HTML",
+            "CSS"
+        ],
+        "website": "https://stellar-pie-8fdc8f.netlify.app/",
+        "code": "https://github.com/dXu23/team-page",
+        "img": {
+            "src": "/devchallenges.io/team-page.png",
+            "alt": "Team page"
+        }
+    },
+    {
+        "title": "Interior Consultant",
+        "description": "Interior consultant homepage.",
+        "tags": [
+            "HTML",
+            "CSS"
+        ],
+        "website": "https://stirring-conkies-c6dae4.netlify.app",
+        "code": "https://github.com/dXu23/interior-consultant",
+        "img": {
+            "src": "/devchallenges.io/interior-consultant.png",
+            "alt": "Interior consultant page"
+        }
+    },
+    {
+        "title": "Recipe page",
+        "description": "Recipe blog page",
+        "tags": [
+            "HTML",
+            "CSS"
+        ],
+        "website": "https://unrivaled-cactus-e52919.netlify.app/",
+        "code": "https://github.com/dXu23/recipe-page",
+        "img": {
+            "src": "/devchallenges.io/recipe.png",
+            "alt": "Recipe page"
+        }
+    },
+    {
+        "title": "Gallery page",
+        "description": "Instagram-like gallery profile page",
+        "tags": [
+            "HTML",
+            "CSS"
+        ],
+        "website": "https://papaya-baklava-eeed97.netlify.app/",
+        "code": "https://github.com/dXu23/gallery-devchallenges",
+        "img": {
+            "src": "/devchallenges.io/gallery.png",
+            "alt": "Instagram-like gallery page"
+    }
+    },
+    {
+        "title": "Checkout page",
+        "description": "Checkout page with form and shopping cart.",
+        "tags": [
+            "HTML",
+            "CSS",
+            "Javascript"
+        ],
+        "website": "https://cheery-moonbeam-5e59de.netlify.app/",
+        "code": "https://github.com/dXu23/checkout-page",
+        "img": {
+            "src": "/devchallenges.io/checkout.png",
+        "alt": "Checkout page"
+    }
+    },
+    {
+        "title": "Edie homepage",
+        "description": "Template homepage for Edie SaaS company website.",
+        "tags": [
+            "HTML",
+            "CSS"
+        ],
+        "website": "https://gentle-cobbler-e02337.netlify.app",
+        "code": "https://github.com/dXu23/edie-homepage",
+        "img": {
+        "src": "/devchallenges.io/edie.png",
+        "alt": "Edie SaaS homepage"
+    }
+    },
+    {
+        "title": "Portfolio Project",
+        "description": "Template portfolio with a grid layout. Allows users to toggle between two layouts.",
+        "tags": [
+            "HTML",
+            "CSS",
+            "Javascript"
+        ],
+        "website": "https://moonlit-heliotrope-333c8e.netlify.app",
+        "code": "https://github.com/dXu23/portfolio-devchallenges",
+    "img": {
+        "src": "/devchallenges.io/portfolio.png",
+        "alt": "Portfolio project for devchallenges.io"
+    }
+    },
+    {
+        "title": "Todo App",
+        "description": "A todo app that organizes tasks into undone, completed, and all tabs.",
+        "tags": [
+            "React",
+            "Typescript",
+            "IndexedDB"
+        ],
+        "website": "https://todo-4d1be4.netlify.app/",
+        "code": "https://github.com/dXu23/React-Todo-App",
+        "img": {
+            "src": "/devchallenges.io/todo.png",
+            "alt": "Todo project for devchallenges.io"
+        }
+    },
+    {
+        "title": "Quote Generator",
+        "description": "A web app that randomly generates quotes.",
+        "tags": [
+            "React",
+            "Typescript",
+            "fetch"
+        ],
+        "website": "https://quote-generator-b7d931.netlify.app/",
+        "code": "https://github.com/dXu23/random-quote-generator",
+        "img": {
+            "src": "/devchallenges.io/quote-generator.png",
+            "alt": "Quote Generator project for devchallenges.io"
+        }
+    }
+]

@@ -1,0 +1,276 @@
+[
+  {
+    "title": "Birthday Site",
+    "description": "A birthday site that plays animated birthday gifs for Daniel Radcliffe.",
+    "tags": [
+      "HTML",
+      "CSS"
+    ],
+    "website": "https://fancy-marzipan-90a14a.netlify.app/",
+    "code": "https://github.com/dXu23/bday",
+    "img": {
+      "src": "/scrimba/bday.png",
+      "alt": "Birthday site project"
+    }
+  },
+  {
+    "title": "Basketball Scorekeeper",
+    "description": "Site for keeping track of the score in a basketball game.",
+    "tags": [
+      "HTML",
+      "CSS",
+      "Javascript"
+    ],
+    "website": "https://chic-sherbet-722d87.netlify.app/",
+    "code": "https://github.com/dXu23/basketball-score-keeper",
+    "img": {
+      "src": "/scrimba/basketball-scorekeeper.png",
+      "alt": "Basketball score keeper"
+    }
+  },
+  {
+    "title": "Unit Converter",
+    "description": "Site that converts between different units",
+    "tags": [
+      "HTML",
+      "CSS",
+      "Javascript"
+    ],
+    "website": "https://sparkly-douhua-5b00db.netlify.app/",
+    "code": "https://github.com/dXu23/unit-converter",
+    "img": {
+      "src": "/scrimba/unit-converter.jpg",
+      "alt": "Unit converter site"
+    }
+  },
+  {
+    "title": "Password Generator",
+    "description": "Site that generates secure passwords.",
+    "tags": [
+      "HTML",
+      "CSS",
+      "Javascript"
+    ],
+    "website": "https://tranquil-cactus-ad5c1b.netlify.app/",
+    "code": "https://github.com/dXu23/password-generator",
+    "img": {
+      "src": "/scrimba/password-generator.png",
+      "alt": "Password generator site"
+    }
+  },
+  {
+    "title": "Dice Game",
+    "description": "Dice game where players roll dice to try to get to 20 first.",
+    "tags": [
+      "HTML",
+      "CSS",
+      "Javascript"
+    ],
+    "website": "https://warm-rugelach-9ad75e.netlify.app/",
+    "code": "https://github.com/dXu23/dice-game",
+    "img": {
+      "src": "/scrimba/dice-game.png",
+      "alt": "Dice Game"
+    }
+  },
+  {
+    "title": "Color Scheme Generator",
+    "description": "Site that generates colors based on a color that the user picks.",
+    "tags": [
+      "HTML",
+      "CSS",
+      "Javascript",
+      "Fetch"
+    ],
+    "website": "https://gleeful-banoffee-886095.netlify.app/",
+    "code": "https://github.com/dXu23/color-scheme-generator",
+    "img": {
+      "src": "/scrimba/color-scheme-generator.png",
+      "alt": "Color Scheme Generator"
+    }
+  },
+  {
+    "title": "Travel Journal",
+    "description": "Travel journal containing articles for various locations",
+    "tags": [
+      "React"
+    ],
+    "website": "https://idyllic-tapioca-96f7b0.netlify.app/",
+    "code": "https://github.com/dXu23/travel-journal",
+    "img": {
+      "src": "/scrimba/travel-journal.jpg",
+      "alt": "Travel journal screenshot"
+    }
+  },
+  {
+    "title": "Business Card",
+    "description": "A business card made using React",
+    "tags": [
+      "React"
+    ],
+    "website": "https://kaleidoscopic-biscochitos-ea847f.netlify.app/",
+    "code": "https://github.com/dXu23/react-business-card",
+    "img": {
+      "src": "/scrimba/business-card.png",
+      "alt": "Business card made using React"
+    }
+  },
+  {
+    "title": "Quizzical",
+    "description": "A trivia quiz app that asks users five questions.",
+    "tags": [
+      "Fetch",
+      "React"
+    ],
+    "website": "https://quizzical-ac6faf.netlify.app/",
+    "code": "https://github.com/dXu23/quizzical",
+    "img": {
+      "src": "/scrimba/quizzical.png",
+      "alt": "Portfolio project for devchallenges.io"
+    }
+  },
+  {
+    "title": "404 Not Found Page",
+    "description": "404 Response error page.",
+    "tags": [
+      "HTML",
+      "CSS"
+    ],
+    "website": "https://cozy-wisp-a301b8.netlify.app/",
+    "code": "https://github.com/dXu23/404-not-found-challenge",
+    "img": {
+      "src": "/devchallenges.io/404.png",
+      "alt": "404 page"
+    }
+  },
+  {
+    "title": "Team Page",
+    "description": "Developer team page.",
+    "tags": [
+      "HTML",
+      "CSS"
+    ],
+    "website": "https://stellar-pie-8fdc8f.netlify.app/",
+    "code": "https://github.com/dXu23/team-page",
+    "img": {
+      "src": "/devchallenges.io/team-page.png",
+      "alt": "Team page"
+    }
+  },
+  {
+    "title": "Interior Consultant",
+    "description": "Interior consultant homepage.",
+    "tags": [
+      "HTML",
+      "CSS"
+    ],
+    "website": "https://stirring-conkies-c6dae4.netlify.app",
+    "code": "https://github.com/dXu23/interior-consultant",
+    "img": {
+      "src": "/devchallenges.io/interior-consultant.png",
+      "alt": "Interior consultant page"
+    }
+  },
+  {
+    "title": "Recipe page",
+    "description": "Recipe blog page",
+    "tags": [
+      "HTML",
+      "CSS"
+    ],
+    "website": "https://unrivaled-cactus-e52919.netlify.app/",
+    "code": "https://github.com/dXu23/recipe-page",
+    "img": {
+      "src": "/devchallenges.io/recipe.png",
+      "alt": "Recipe page"
+    }
+  },
+  {
+    "title": "Gallery page",
+    "description": "Instagram-like gallery profile page",
+    "tags": [
+      "HTML",
+      "CSS"
+    ],
+    "website": "https://papaya-baklava-eeed97.netlify.app/",
+    "code": "https://github.com/dXu23/gallery-devchallenges",
+    "img": {
+      "src": "/devchallenges.io/gallery.png",
+      "alt": "Instagram-like gallery page"
+    }
+  },
+  {
+    "title": "Checkout page",
+    "description": "Checkout page with form and shopping cart.",
+    "tags": [
+      "HTML",
+      "CSS",
+      "Javascript"
+    ],
+    "website": "https://cheery-moonbeam-5e59de.netlify.app/",
+    "code": "https://github.com/dXu23/checkout-page",
+    "img": {
+      "src": "/devchallenges.io/checkout.png",
+      "alt": "Checkout page"
+    }
+  },
+  {
+    "title": "Edie homepage",
+    "description": "Template homepage for Edie SaaS company website.",
+    "tags": [
+      "HTML",
+      "CSS"
+    ],
+    "website": "https://gentle-cobbler-e02337.netlify.app",
+    "code": "https://github.com/dXu23/edie-homepage",
+    "img": {
+      "src": "/devchallenges.io/edie.png",
+      "alt": "Edie SaaS homepage"
+    }
+  },
+  {
+    "title": "Portfolio Project",
+    "description": "Template portfolio with a grid layout. Allows users to toggle between two layouts.",
+    "tags": [
+      "HTML",
+      "CSS",
+      "Javascript"
+    ],
+    "website": "https://moonlit-heliotrope-333c8e.netlify.app",
+    "code": "https://github.com/dXu23/portfolio-devchallenges",
+    "img": {
+      "src": "/devchallenges.io/portfolio.png",
+      "alt": "Portfolio project for devchallenges.io"
+    }
+  },
+  {
+    "title": "Todo App",
+    "description": "A todo app that organizes tasks into undone, completed, and all tabs.",
+    "tags": [
+      "React",
+      "Typescript",
+      "IndexedDB"
+    ],
+    "website": "https://todo-4d1be4.netlify.app/",
+    "code": "https://github.com/dXu23/React-Todo-App",
+    "img": {
+      "src": "/devchallenges.io/todo.png",
+      "alt": "Todo project for devchallenges.io"
+    }
+  },
+  {
+    "title": "Quote Generator",
+    "description": "A web app that randomly generates quotes.",
+    "tags": [
+      "React",
+      "Typescript",
+      "fetch"
+    ],
+    "website": "https://quote-generator-b7d931.netlify.app/",
+    "code": "https://github.com/dXu23/random-quote-generator",
+    "img": {
+      "src": "/devchallenges.io/quote-generator.png",
+      "alt": "Quote Generator project for devchallenges.io"
+    }
+  }
+]

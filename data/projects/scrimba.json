@@ -1,0 +1,132 @@
+[
+    {
+      "title": "Birthday Site",
+      "description": "A birthday site that plays animated birthday gifs for Daniel Radcliffe.",
+      "tags": [
+        "HTML",
+        "CSS"
+      ],
+      "website": "https://fancy-marzipan-90a14a.netlify.app/",
+      "code": "https://github.com/dXu23/bday",
+      "img": {
+        "src": "/scrimba/bday.png",
+        "alt": "Birthday site project"
+      }
+    },
+    {
+      "title": "Basketball Scorekeeper",
+      "description": "Site for keeping track of the score in a basketball game.",
+      "tags": [
+        "HTML",
+        "CSS",
+        "Javascript"
+      ],
+      "website": "https://chic-sherbet-722d87.netlify.app/",
+      "code": "https://github.com/dXu23/basketball-score-keeper",
+      "img": {
+        "src": "/scrimba/basketball-scorekeeper.png",
+        "alt": "Basketball score keeper"
+      }
+    },
+    {
+      "title": "Unit Converter",
+      "description": "Site that converts between different units",
+      "tags": [
+        "HTML",
+        "CSS",
+        "Javascript"
+      ],
+      "website": "https://sparkly-douhua-5b00db.netlify.app/",
+      "code": "https://github.com/dXu23/unit-converter",
+      "img": {
+        "src": "/scrimba/unit-converter.jpg",
+        "alt": "Unit converter site"
+      }
+    },
+    {
+      "title": "Password Generator",
+      "description": "Site that generates secure passwords.",
+      "tags": [
+        "HTML",
+        "CSS",
+        "Javascript"
+      ],
+      "website": "https://tranquil-cactus-ad5c1b.netlify.app/",
+      "code": "https://github.com/dXu23/password-generator",
+      "img": {
+        "src": "/scrimba/password-generator.png",
+        "alt": "Password generator site"
+      }
+    },
+    {
+      "title": "Dice Game",
+      "description": "Dice game where players roll dice to try to get to 20 first.",
+      "tags": [
+        "HTML",
+        "CSS",
+        "Javascript"
+      ],
+      "website": "https://warm-rugelach-9ad75e.netlify.app/",
+      "code": "https://github.com/dXu23/dice-game",
+      "img": {
+        "src": "/scrimba/dice-game.png",
+        "alt": "Dice Game"
+      }
+    },
+    {
+      "title": "Color Scheme Generator",
+      "description": "Site that generates colors based on a color that the user picks.",
+      "tags": [
+        "HTML",
+        "CSS",
+        "Javascript",
+        "Fetch"
+      ],
+      "website": "https://gleeful-banoffee-886095.netlify.app/",
+      "code": "https://github.com/dXu23/color-scheme-generator",
+      "img": {
+        "src": "/scrimba/color-scheme-generator.png",
+        "alt": "Color Scheme Generator"
+      }
+    },
+    {
+      "title": "Travel Journal",
+      "description": "Travel journal containing articles for various locations",
+      "tags": [
+        "React"
+      ],
+      "website": "https://idyllic-tapioca-96f7b0.netlify.app/",
+      "code": "https://github.com/dXu23/travel-journal",
+      "img": {
+        "src": "/scrimba/travel-journal.jpg",
+        "alt": "Travel journal screenshot"
+      }
+    },
+    {
+      "title": "Business Card",
+      "description": "A business card made using React",
+      "tags": [
+        "React"
+      ],
+      "website": "https://kaleidoscopic-biscochitos-ea847f.netlify.app/",
+      "code": "https://github.com/dXu23/react-business-card",
+      "img": {
+        "src": "/scrimba/business-card.png",
+        "alt": "Business card made using React"
+      }
+    },
+    {
+      "title": "Quizzical",
+      "description": "A trivia quiz app that asks users five questions.",
+      "tags": [
+        "Fetch",
+        "React"
+      ],
+      "website": "https://quizzical-ac6faf.netlify.app/",
+      "code": "https://github.com/dXu23/quizzical",
+      "img": {
+        "src": "/scrimba/quizzical.png",
+        "alt": "Portfolio project for devchallenges.io"
+      }
+    }
+]

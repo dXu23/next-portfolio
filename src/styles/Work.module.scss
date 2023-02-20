@@ -1,0 +1,15 @@
+.projects {
+  height: auto;
+}
+
+.platformName {
+  font-size: 1.8rem;
+  color: var(--theme-cyan);
+}
+
+.platformProjects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(32rem, 100%), 1fr));
+  gap: 3em;
+}
+
