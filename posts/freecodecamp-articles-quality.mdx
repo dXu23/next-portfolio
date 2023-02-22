@@ -1,0 +1,131 @@
+---
+title: On the Quality of freeCodeCamp Articles
+date: 'February 2, 2023'
+description: Sometimes, the articles seem to be a little lackluster
+thumbnailUrl: 'https://camo.githubusercontent.com/d069971a0af4d9e393066dc77ced000cff23a1f6bbfbb9e7704a870192a926ca/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f66726565636f646563616d702f776964652d736f6369616c2d62616e6e65722e706e67'
+tags: ['freeCodeCamp']
+---
+
+Let me just say this first: I really appreciate what freeCodeCamp
+has done for the programming community. Many people's first introduction
+to programming, in fact, was through freeCodeCamp. However, the quality
+of their articles often leave something to be desired. 
+
+For example, I recently read an article titled [How to Print Array Elements
+in a Given Order With or Without a Function]
+(https://www.freecodecamp.org/news/how-to-print-array-elements-in-given-order-with-and-without-function/).
+I cringed when I saw the very first code snippet, which was this:
+<SyntaxHighlighter language="cpp">
+  {`
+    // Bad: 
+    cout << "Enter the array size: ";
+    int arraySize;
+    cin >> arraySize;
+    int arr[arraySize];
+  `}
+</SyntaxHighlighter>
+
+As explained in this article [Legitimate Use of Variable Length Arrays]
+(https://nullprogram.com/blog/2019/10/27/), variable length arrays (VLAs)
+are usually bad practice. Most of the time, it is better to use std::vector
+instead:
+
+<SyntaxHighlighter language="cpp">
+  {`
+    // Good: 
+    cout << "Enter the array size: ";
+    int arraySize;
+    cin >> arraySize;
+    vector<int> arr(arraySize, 0);
+  `}
+</SyntaxHighlighter>
+
+The other gripes that I have with the article is that it doesn't mention
+for-each loops, which are present in most other C-based languages except C
+itself and the use of std::endl when '\n' is usually better. See 
+[Don't Use std::endl](https://accu.org/journals/overload/27/149/sharpe_2619/).
+
+This is not the only freeCodeCamp article that I have problems with, of course.
+About a couple of weeks ago, I read an article titled [How to Build Your Own 
+Blog with Next.js and MDX]
+(https://www.freecodecamp.org/news/how-to-build-your-own-blog-with-next-js-and-mdx/).
+I was originally going to use the article to help me build this blog, but I found
+that I couldn't since the errors present in the article made it impossible. The
+code snippets sometimes conflicted logically with each other. For example, the
+function getAllArticles seems alright at first:
+
+<SyntaxHighlighter language="javascript">
+  {`
+    export async function getAllArticles() {
+      const articles = fs.readdirSync(path.join(process.cwd(), 'data/articles'))
+
+      return articles.reduce((allArticles, articleSlug) => {
+        // get parsed data from mdx files in the "articles" dir
+        const source = fs.readFileSync(
+          path.join(process.cwd(), 'data/articles', articleSlug),
+          'utf-8'
+        )
+        const { data } = matter(source)
+
+        return [
+          {
+            ...data, // pay attention to this line here
+            slug: articleSlug.replace('.mdx', ''),
+            readingTime: readingTime(source).text,
+          },
+          ...allArticles,
+        ]
+      }, [])
+    }
+
+  `}
+</SyntaxHighlighter>
+
+The function appears to be returning an array of article objects, with each
+article having the fields slug, readingTime, and the fields present in data.
+If we take a look at getStaticProps, however...
+
+<SyntaxHighlighter language="javascript">
+import { getAllArticles } from '../../src/utils/mdx'
+
+export async function getStaticProps() {
+  const articles = await getAllArticles()
+
+  articles
+    .map((article) => article.data) // original article object contains nested data fields ?!
+    .sort((a, b) => {
+      if (a.data.publishedAt > b.data.publishedAt) return 1
+      if (a.data.publishedAt < b.data.publishedAt) return -1
+
+      return 0
+    })
+
+  return {
+    props: {
+      posts: articles.reverse(),
+    },
+  }
+}
+</SyntaxHighlighter>
+
+It should be the case that the article objects present in the array
+returned by getAllArticles do not have a data field; instead, the
+article objects should contain the fields present in the *data* object.
+However, the code in getStaticProps references data; while there is the
+possibility that the data object present in the return value of matter
+also contains a data field, that field would have to contain ANOTHER
+data field, which is pretty unlikely.
+
+Worse still, the method chain consisting of map and sort in getStaticProps
+does not even appear to be doing anything meaningful. The Array.prototype.map
+method in Javascript [**creates a new array**]
+(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map),
+and Array.prototype.sort [**sorts the elements of an array in place**]
+(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort).
+So the articles array returned by getAllArticles **never even changes**. 
+
+I think the takeaway here is that freeCodeCamp articles are sometimes substandard,
+so programmers should take caution when reading their articles. While I'm aware that
+there is an [editorial process](https://www.freecodecamp.org/news/developer-news-style-guide/)
+that freeCodeCamp uses, I would appreciate it if they checked whether the code present in
+their tutorials/articles actually works and is idiomatic. 
