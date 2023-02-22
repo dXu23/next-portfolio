@@ -86,26 +86,29 @@ article having the fields slug, readingTime, and the fields present in data.
 If we take a look at getStaticProps, however...
 
 <SyntaxHighlighter language="javascript">
-import { getAllArticles } from '../../src/utils/mdx'
+  {`
+    import { getAllArticles } from '../../src/utils/mdx'
 
-export async function getStaticProps() {
-  const articles = await getAllArticles()
+    export async function getStaticProps() {
+      const articles = await getAllArticles()
 
-  articles
-    .map((article) => article.data) // original article object contains nested data fields ?!
-    .sort((a, b) => {
-      if (a.data.publishedAt > b.data.publishedAt) return 1
-      if (a.data.publishedAt < b.data.publishedAt) return -1
+      articles
+        .map((article) => article.data) // original article object contains nested data fields ?!
+        .sort((a, b) => {
+          if (a.data.publishedAt > b.data.publishedAt) return 1
+          if (a.data.publishedAt < b.data.publishedAt) return -1
 
-      return 0
-    })
+          return 0
+        })
 
-  return {
-    props: {
-      posts: articles.reverse(),
-    },
-  }
-}
+      return {
+        props: {
+          posts: articles.reverse(),
+        },
+      }
+    }
+    
+  `}
 </SyntaxHighlighter>
 
 It should be the case that the article objects present in the array
