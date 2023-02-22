@@ -25,10 +25,10 @@ I cringed when I saw the very first code snippet, which was this:
   `}
 </SyntaxHighlighter>
 
-As explained in this article [Legitimate Use of Variable Length Arrays]
-(https://nullprogram.com/blog/2019/10/27/), variable length arrays (VLAs)
-are usually bad practice. Most of the time, it is better to use std::vector
-instead:
+As explained in this article 
+[Legitimate Use of Variable Length Arrays](https://nullprogram.com/blog/2019/10/27/),
+variable length arrays (VLAs) are usually bad practice. Most of the time, it is
+better to use std::vector instead:
 
 <SyntaxHighlighter language="cpp">
   {`
@@ -46,9 +46,8 @@ itself and the use of std::endl when '\n' is usually better. See
 [Don't Use std::endl](https://accu.org/journals/overload/27/149/sharpe_2619/).
 
 This is not the only freeCodeCamp article that I have problems with, of course.
-About a couple of weeks ago, I read an article titled [How to Build Your Own 
-Blog with Next.js and MDX]
-(https://www.freecodecamp.org/news/how-to-build-your-own-blog-with-next-js-and-mdx/).
+About a couple of weeks ago, I read an article titled
+[How to Build Your Own Blog with Next.js and MDX](https://www.freecodecamp.org/news/how-to-build-your-own-blog-with-next-js-and-mdx/).
 I was originally going to use the article to help me build this blog, but I found
 that I couldn't since the errors present in the article made it impossible. The
 code snippets sometimes conflicted logically with each other. For example, the
@@ -107,7 +106,7 @@ If we take a look at getStaticProps, however...
         },
       }
     }
-    
+
   `}
 </SyntaxHighlighter>
 
@@ -121,10 +120,10 @@ data field, which is pretty unlikely.
 
 Worse still, the method chain consisting of map and sort in getStaticProps
 does not even appear to be doing anything meaningful. The Array.prototype.map
-method in Javascript [**creates a new array**]
-(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map),
-and Array.prototype.sort [**sorts the elements of an array in place**]
-(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort).
+method in Javascript
+[creates a new array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map),
+and Array.prototype.sort
+[sorts the elements of an array in place](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort).
 So the articles array returned by getAllArticles **never even changes**. 
 
 I think the takeaway here is that freeCodeCamp articles are sometimes substandard,
