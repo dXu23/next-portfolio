@@ -30,12 +30,12 @@ export default function Home() {
             <div id={styles.icons}>
               {/* 
               // @ts-ignore */}
-              <Link href="https://github.com" className={styles.iconShadow}>
+              <Link href="https://github.com/dXu23" className={styles.iconShadow}>
                 <FaGithubSquare />
               </Link>
               {/* 
               // @ts-ignore */}
-              <Link href="https://linkedin.com" className={styles.iconShadow}>
+              <Link href="https://linkedin.com/in/dan-x" className={styles.iconShadow}>
                 <FaLinkedinIn/>
               </Link>
               {/* 
