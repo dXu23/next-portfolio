@@ -40,7 +40,7 @@ export default function Home() {
               </Link>
               {/* 
               // @ts-ignore */}
-              <Link href="https://twitter.com" className={styles.iconShadow}>
+              <Link href="https://twitter.com/dydevx" className={styles.iconShadow}>
                 <FaTwitter/>
               </Link>
             </div>
