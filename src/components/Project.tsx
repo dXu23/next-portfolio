@@ -22,7 +22,7 @@ export default function Project({ project }: { project: IProject }) {
               loading="lazy"
             />
             <div>
-              <h3>{project.title}</h3>
+              <Link href={project.website}><h3>{project.title}</h3></Link>
               <p>
                 {project.description}
               </p>
