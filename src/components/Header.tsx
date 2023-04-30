@@ -28,7 +28,10 @@ export default function Header() {
     return (
       <div className={styles.holder}>
         <SettingsPicker hidden={settingsHidden} />
-        <header className={poppins.className + ' ' + styles.header}>
+        <header
+          className={poppins.className + ' ' + styles.header}
+          role='banner'
+        >
           <Image
             src="/vercel.svg"
             alt="Vercel Logo"

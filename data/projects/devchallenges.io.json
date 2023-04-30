@@ -61,7 +61,7 @@
         "tags": [
             "HTML",
             "CSS",
-            "Javascript"
+            "JavaScript"
         ],
         "website": "https://cheery-moonbeam-5e59de.netlify.app/",
         "code": "https://github.com/dXu23/checkout-page",
@@ -90,7 +90,7 @@
         "tags": [
             "HTML",
             "CSS",
-            "Javascript"
+            "JavaScript"
         ],
         "website": "https://moonlit-heliotrope-333c8e.netlify.app",
         "code": "https://github.com/dXu23/portfolio-devchallenges",
@@ -104,7 +104,7 @@
         "description": "A todo app that organizes tasks into undone, completed, and all tabs.",
         "tags": [
             "React",
-            "Typescript",
+            "TypeScript",
             "IndexedDB"
         ],
         "website": "https://todo-4d1be4.netlify.app/",
@@ -119,8 +119,8 @@
         "description": "A web app that randomly generates quotes.",
         "tags": [
             "React",
-            "Typescript",
-            "fetch"
+            "TypeScript",
+            "Fetch"
         ],
         "website": "https://quote-generator-b7d931.netlify.app/",
         "code": "https://github.com/dXu23/random-quote-generator",

@@ -33,25 +33,14 @@ export default function SettingsPicker({ hidden }: { hidden: boolean }) {
         changeSettings('scheme', isDark ? 'dark' : 'light');
     }, [isDark, changeSettingsCallback]);
 
-    let settingsStyles: { [key: string]: string } = {
-        maxHeight: '100px',
-    };
-
     const selectedThemeStyler = (theme: string) =>
         ({
             border: settings.theme === theme ? '1px solid var(--text-primary)' : 'initial'
         });
 
-    if (hidden) {
-        settingsStyles = {
-            maxHeight: '0',
-            opacity: '0',
-            visibility: 'hidden',
-        };
-    }
 
     return (
-      <div className={`${styles.settingsPicker} ${poppins.className}`} style={settingsStyles}>
+      <div className={`${styles.settingsPicker}${hidden ? ` ${styles.settingsPickerHidden}` : ""}`}>
         <div className={styles.themeSettings}>
           <label className={styles.themeSetting} style={selectedThemeStyler('default')}>
             <input

@@ -202,12 +202,12 @@ a {
 }
 
 button {
-  background-color: var(--text-primary);
+  background-color: var(--theme-magenta);
   color: var(--background);
   cursor: pointer;
   border-radius: 8%;
   border: none;
-  padding: 0.5em 0.3em;
+  padding: 0.5em 0.8em;
 }
 
 .sr-only {
