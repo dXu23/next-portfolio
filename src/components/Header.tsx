@@ -21,8 +21,14 @@ export default function Header() {
     // @ts-ignore
     const [ settingsHidden, setIsSettingsHidden ] = React.useState(true);
 
+    const [ navHidden, setNavHidden ] = React.useState(true);
+
     function toggleSettingsVisibility() {
-        setIsSettingsHidden((prevSettingsHidden: boolean) => !prevSettingsHidden);
+      setIsSettingsHidden((prevSettingsHidden: boolean) => !prevSettingsHidden);
+    }
+
+    function toggleNavHidden() {
+      setNavHidden((prevNavStatus: boolean) => !prevNavStatus);
     }
 
     return (
@@ -40,8 +46,8 @@ export default function Header() {
             height={36}
             priority
           />
-          <div className={styles.headerRight}>
-            <nav className={styles.navbar}>
+          <div className={styles.headerEnd}>
+            <nav role="navigation" className={`${styles.navbar}${navHidden ? ' ' + styles.revealed : ''}`}>
               <ul>
                 <li><Link href="/" className={router.pathname === '/' ? styles.active : ''}>Home</Link></li>
                 <li><Link href="/About" className={router.pathname === '/About' ? styles.active : ''}>About</Link></li>
@@ -52,6 +58,13 @@ export default function Header() {
             </nav>
             <button onClick={toggleSettingsVisibility}>
               <BsGearFill />
+            </button>
+            <button className={`${styles.navbarBtn}${navHidden ? '' : ' ' + styles.navbarBtnOpen}`} onClick={toggleNavHidden}>
+              <svg className={`${styles.hamburger}`} viewBox="0 0 40 40">
+                <rect fill="currentColor" x="4" y="11" width="32" height="2" rx="2" ry="1" />
+                <rect fill="currentColor" x="4" y="19" width="32" height="2" rx="2" ry="1" />
+                <rect fill="currentColor" x="4" y="27" width="32" height="2" rx="2" ry="1" />
+              </svg>
             </button>
           </div>
         </header>

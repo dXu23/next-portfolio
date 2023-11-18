@@ -10,7 +10,7 @@ export default function useLocalStorage<T>(
         if (stored) {
             setValue(parse(stored));
         }
-    }, []);
+    }, [key]);
 
     useEffect(() => {
         localStorage.setItem(key, JSON.stringify(value));
