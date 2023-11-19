@@ -19,10 +19,11 @@ body {
   height: 100%;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
-
 
 .App {
   color: var(--text-primary);
@@ -40,161 +41,53 @@ body {
   $themeYellow: null,
   $themeBlue: null,
   $themeMagenta: null,
-  $themeCyan: null,
+  $themeCyan: null
 ) {
-    --background: #{$bg};
-    --text-primary: #{$textPrimary};
-    --theme-red: #{$themeRed};
-    --theme-green: #{$themeGreen};
-    --theme-yellow: #{$themeYellow};
-    --theme-blue: #{$themeBlue};
-    --theme-magenta: #{$themeMagenta};
-    --theme-cyan: #{$themeCyan};
+  --background: #{$bg};
+  --text-primary: #{$textPrimary};
+  --theme-red: #{$themeRed};
+  --theme-green: #{$themeGreen};
+  --theme-yellow: #{$themeYellow};
+  --theme-blue: #{$themeBlue};
+  --theme-magenta: #{$themeMagenta};
+  --theme-cyan: #{$themeCyan};
 }
 
 $themes: (
-    "default": (
-      (
-        #000,
-        #d9d9d9,
-        #cd0000,
-        #00cd00,
-        #cdcd00,
-        #0000ee,
-        #cd00cd,
-        #00cdcd,
-      ),
-      (
-        #fff,
-        #262626,
-        #f33,
-        #3f3,
-        #ff3,
-        #5757ff,
-        #f3f,
-        #3ff,
-      )
-    ),
-    "tomorrow": (
-      (
-        #1d1f21,
-        #c4c8c5,
-        #c66,
-        #b5bd68,
-        #f0c574,
-        #80a1bd,
-        #b294ba,
-        #8abdb6,
-      ),
-      (
-        #fff,
-        #4c4c4c,
-        #c82828,
-        #708b00,
-        #e9b600,
-        #4170ae,
-        #8958a7,
-        #3d999f
-      )
-    ),
-    "gruvbox": (
-      (
-        #282828,
-        #ebdbb2,
-        #cc241d,
-        #98971a,
-        #d79921,
-        #458588,
-        #b16286,
-        #689d6a
-      ),
-      (
-        #fbf1c7,
-        #d65d0e,
-        #cc241d,
-        #98971a,
-        #d79921,
-        #458588,
-        #b16286,
-        #689d6a
-      )
-    ),
-    "ayu": (
-      (
-        #0e1419,
-        #e5e1cf,
-        #ff3333,
-        #b8cc52,
-        #e6c446,
-        #36a3d9,
-        #f07078,
-        #95e5cb
-      ),
-      (
-        #fafafa,
-        #5b6673,
-        #ff3333,
-        #86b200,
-        #f19618,
-        #41a6d9,
-        #f07078,
-        #4cbe99
-      )
-    ),
-    "solarized": (
-      (
-        #002b36,
-        #839496,
-        #d01b24,
-        #728905,
-        #a57705,
-        #2075c7,
-        #c61b6e,
-        #259185
-      ),
-      (
-        #fdf6e3,
-        #657b83,
-        #d70000,
-        #578700,
-        #af8700,
-        #0087ff,
-        #af005f,
-        #00afaf
-      )
-    ),
-    "material": (
-      (
-        #222221,
-        #e4e4e4,
-        #b7141e,
-        #457b23,
-        #f5971d,
-        #134eb2,
-        #550087,
-        #0e707c
-      ),
-      (
-        #eaeaea,
-        #222221,
-        #b7141e,
-        #457b23,
-        #f5971d,
-        #134eb2,
-        #550087,
-        #0e707c
-      )
-    )
+  "default": (
+    (#000, #d9d9d9, #cd0000, #00cd00, #cdcd00, #0000ee, #cd00cd, #00cdcd),
+    (#fff, #262626, #f33, #3f3, #ff3, #5757ff, #f3f, #3ff),
+  ),
+  "tomorrow": (
+    (#1d1f21, #c4c8c5, #c66, #b5bd68, #f0c574, #80a1bd, #b294ba, #8abdb6),
+    (#fff, #4c4c4c, #c82828, #708b00, #e9b600, #4170ae, #8958a7, #3d999f),
+  ),
+  "gruvbox": (
+    (#282828, #ebdbb2, #cc241d, #98971a, #d79921, #458588, #b16286, #689d6a),
+    (#fbf1c7, #d65d0e, #cc241d, #98971a, #d79921, #458588, #b16286, #689d6a),
+  ),
+  "ayu": (
+    (#0e1419, #e5e1cf, #ff3333, #b8cc52, #e6c446, #36a3d9, #f07078, #95e5cb),
+    (#fafafa, #5b6673, #ff3333, #86b200, #f19618, #41a6d9, #f07078, #4cbe99),
+  ),
+  "solarized": (
+    (#002b36, #839496, #d01b24, #728905, #a57705, #2075c7, #c61b6e, #259185),
+    (#fdf6e3, #657b83, #d70000, #578700, #af8700, #0087ff, #af005f, #00afaf),
+  ),
+  "material": (
+    (#222221, #e4e4e4, #b7141e, #457b23, #f5971d, #134eb2, #550087, #0e707c),
+    (#eaeaea, #222221, #b7141e, #457b23, #f5971d, #134eb2, #550087, #0e707c),
+  ),
 );
 
 @each $theme, $values in $themes {
-    [data-theme="#{$theme}-dark"] {
-      @include styleTheme(nth($values, 1)...)
-    }
+  [data-theme="#{$theme}-dark"] {
+    @include styleTheme(nth($values, 1)...);
+  }
 
-    [data-theme="#{$theme}-light"] {
-      @include styleTheme(nth($values, -1)...)
-    }
+  [data-theme="#{$theme}-light"] {
+    @include styleTheme(nth($values, -1)...);
+  }
 }
 
 a {
@@ -205,7 +98,7 @@ button {
   background-color: var(--theme-magenta);
   color: var(--background);
   cursor: pointer;
-  border-radius: 50%;
+  border-radius: 8px;
   border: none;
   padding: 0.5em 0.8em;
 }
@@ -220,7 +113,7 @@ button {
   font-size: 1px;
   line-height: 1px;
   overflow: hidden;
-  clip: rect(0,0,0,0);
+  clip: rect(0, 0, 0, 0);
   border: 0;
   outline: 0;
 }
