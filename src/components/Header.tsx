@@ -39,8 +39,8 @@ export default function Header() {
           role='banner'
         >
           <Image
-            src="/vercel.svg"
-            alt="Vercel Logo"
+            src="/logo.svg"
+            alt="My Logo"
             className={styles.vercelLogo}
             width={150}
             height={36}
