@@ -42,6 +42,11 @@
   z-index: 1000;
 }
 
+.myLogo {
+  height: 60%;
+  align-self: center;
+}
+
 .active::after {
   content: "";
   background-color: var(--theme-magenta);

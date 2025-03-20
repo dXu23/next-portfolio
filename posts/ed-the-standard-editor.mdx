@@ -1,0 +1,154 @@
+---
+title: How to use the Standard Editor ed
+date: 'March 20, 20225'
+description: Some tips on how to use the standard editor ed
+thumbnailUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/2e/Ed_lines.jpg'
+tags: ['textediting']
+---
+
+ed, commonly referred to as the standard editor, is a very early text
+editor written for UNIX. It operates on lines instead of individual
+characters. Vim, Emacs, and VS Code dominate the text editor market,
+but ed still has a few niche usecases. It can be useful for scripting,
+in environments without ncurses or termcap, or computers with very low
+RAM. In this article, I will show a couple of tips on how to use ed.
+
+To start ed, one can simply type "ed". Unlike vi and its descendants,
+ed will give a warning if it is called on a non-existant file
+name. Therefore, a file name should be given as an argument to ed only
+if the file actually exists. Like vi/vim, though, ed is a modal
+editor. ed by default starts in command mode. The "a" command will
+cause ed to go into insertion mode and append text after the current
+line, while the "i" command will likewise prepend text before the
+current line. The "." command followed by a newline ends insertion
+mode. The "w" command writes to a file, and "q" command quits ed. This
+is probably best demonstrated as an example.
+
+<SyntaxHighlighter language="shell">
+$ ed
+a
+#include <stdio.h>
+
+int main(void) {
+    printf("Hello, world!\n");
+    return 0;
+}
+
+.
+w hello.c
+85
+q
+$ ls
+hello.c
+</SyntaxHighlighter>
+
+Of course, we can compile the C program:
+<SyntaxHighlighter language="shell">
+$ cc -o hello hello.c
+$ ./hello
+Hello, world!
+</SyntaxHighlighter>
+
+Unfortunately, the C program that was written, while not necessarily
+incorrect, could be thought of as somewhat not cross-compatible. Let's
+fix that.
+
+To edit hello.c, we can type
+<SyntaxHighlighter language="shell">
+ed hello.c
+</SyntaxHighlighter>
+
+To print the current line, we can then type
+<SyntaxHighlighter language="shell">
+p
+
+</SyntaxHighlighter>
+
+It turns out that ed starts at the very last line. To go to the first
+line, as well as print it, we can type
+
+<SyntaxHighlighter language="shell">
+1p
+#include <stdio.h>
+</SyntaxHighlighter>
+
+To copy a line at a certain point below another line, one can use
+the t command. The following copies the line we are
+currently on, and then pastes it below the current line.
+
+<SyntaxHighlighter language="shell">
+.t.
+</SyntaxHighlighter>
+
+If we want to change the current line, then we can use the substitute
+command. This will feel very familiar to fans of *nix OSes who have
+used sed before.
+
+<SyntaxHighlighter language="shell">
+s/io/lib/n
+2       #include <stdlib.h>
+</SyntaxHighlighter>
+
+<SyntaxHighlighter language="shell">
+/printf/s//puts/n
+5       puts("Hello, world\n");
+</SyntaxHighlighter>
+
+Of course, the new line character is redundant since the puts function
+outputs a new line after it prints a string to standard output, so we
+can do away with it via the following command:
+
+<SyntaxHighlighter language="shell">
+s/\\n//p
+    puts("Hello, world");
+</SyntaxHighlighter>
+
+Lastly, 0 is not necessarily the exit code that means success on all
+operating systems. To make our C program as compatible as possible,
+one merely has to type
+
+<SyntaxHighlighter language="shell">
+/0/s//EXIT_SUCCESS/p
+</SyntaxHighlighter>
+
+To save and quit a file simultaneously, the "wq" command can be used:
+
+<SyntaxHighlighter language="shell">
+wq
+112
+</SyntaxHighlighter>
+
+ed also has a delete command. Let's say that, for whatever reason, we
+want to delete the inner contents of the main block. Then we can use
+the d command:
+
+<SyntaxHighlighter language="shell">
+ed hello.c
+112
+?main?+1,?^}?-1d
+?main?+1,.p
+int main(void) {
+}
+</SyntaxHighlighter>
+
+We end up on the closing brace of the main block by deleting its inner
+contents. To undo a command, we can use the u command, which stands
+for undo.
+
+<SyntaxHighlighter language="shell">
+u
+?main?,.p
+int main(void) {
+    puts("Hello, world!");
+    return EXIT_SUCCESS;
+}
+
+</SyntaxHighlighter>
+
+There are a few more useful commands for the ed editor, but I think
+that this is a good overview of some basic commands. Here are some
+more resources on using the ed editor:
+
+ - [Batch editing files with ed](https://jvns.ca/blog/2018/05/11/batch-editing-files-with-ed/)
+ - [The GNU ed line editor](https://www.gnu.org/software/ed/manual/ed_manual.html)
+ - [Ed Mastery](https://www.tiltedwindmillpress.com/product/ed/)

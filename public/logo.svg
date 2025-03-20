@@ -83,11 +83,11 @@
          transform="matrix(0.99999936,-0.00112708,0.52560372,-0.85072953,0,0)" />
     </g>
     <g
-       id="g1390"
-       transform="translate(0.88646949,-1.0743784)">
+       id="g834"
+       transform="translate(3.3827179,-0.82284331)">
       <rect
          style="fill:#04c000;fill-opacity:1;stroke-width:0.888603"
-         id="rect1251"
+         id="rect830"
          width="33.332478"
          height="59.765568"
          x="39.655434"
@@ -95,7 +95,7 @@
       <path
          sodipodi:type="star"
          style="fill:#04c000;fill-opacity:1;stroke-width:3.02362"
-         id="path1275"
+         id="path832"
          inkscape:flatsided="true"
          sodipodi:sides="3"
          sodipodi:cx="121.60265"

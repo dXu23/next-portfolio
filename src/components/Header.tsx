@@ -41,7 +41,7 @@ export default function Header() {
           <Image
             src="/logo.svg"
             alt="My Logo"
-            className={styles.vercelLogo}
+            className={styles.myLogo}
             width={150}
             height={36}
             priority
