@@ -25,14 +25,15 @@ mode. The "w" command writes to a file, and "q" command quits ed. This
 is probably best demonstrated as an example.
 
 <SyntaxHighlighter language="plaintext">
+{`
 $ ed
 a
 #include \<stdio.h\>
 
-int main(void) \{
+int main(void) {
     printf("Hello, world!\n");
     return 0;
-\}
+}
 
 .
 w hello.c
@@ -40,13 +41,16 @@ w hello.c
 q
 $ ls
 hello.c
+`}
 </SyntaxHighlighter>
 
 Of course, we can compile the C program:
 <SyntaxHighlighter language="plaintext">
+{`
 $ cc -o hello hello.c
 $ ./hello
 Hello, world!
+`}
 </SyntaxHighlighter>
 
 Unfortunately, the C program that was written, while not necessarily
@@ -55,21 +59,27 @@ fix that.
 
 To edit hello.c, we can type
 <SyntaxHighlighter language="plaintext">
+{`
 ed hello.c
+`}
 </SyntaxHighlighter>
 
 To print the current line, we can then type
 <SyntaxHighlighter language="plaintext">
+{`
 p
 
+`}
 </SyntaxHighlighter>
 
 It turns out that ed starts at the very last line. To go to the first
 line, as well as print it, we can type
 
 <SyntaxHighlighter language="plaintext">
+{`
 1p
 #include \<stdio.h\>
+`}
 </SyntaxHighlighter>
 
 To copy a line at a certain point below another line, one can use
@@ -77,7 +87,9 @@ the t command. The following copies the line we are
 currently on, and then pastes it below the current line.
 
 <SyntaxHighlighter language="plaintext">
+{`
 .t.
+`}
 </SyntaxHighlighter>
 
 If we want to change the current line, then we can use the substitute
@@ -85,13 +97,17 @@ command. This will feel very familiar to fans of *nix OSes who have
 used sed before.
 
 <SyntaxHighlighter language="plaintext">
+{`
 s/io/lib/n
 2       #include \<stdlib.h\>
+`}
 </SyntaxHighlighter>
 
 <SyntaxHighlighter language="plaintext">
+{`
 /printf/s//puts/n
 5       puts("Hello, world\n");
+`}
 </SyntaxHighlighter>
 
 Of course, the new line character is redundant since the puts function
@@ -99,8 +115,10 @@ outputs a new line after it prints a string to standard output, so we
 can do away with it via the following command:
 
 <SyntaxHighlighter language="plaintext">
+{`
 s/\\n//p
     puts("Hello, world");
+`}
 </SyntaxHighlighter>
 
 Lastly, 0 is not necessarily the exit code that means success on all
@@ -108,14 +126,18 @@ operating systems. To make our C program as compatible as possible,
 one merely has to type
 
 <SyntaxHighlighter language="plaintext">
+{`
 /0/s//EXIT_SUCCESS/p
+`}
 </SyntaxHighlighter>
 
 To save and quit a file simultaneously, the "wq" command can be used:
 
 <SyntaxHighlighter language="plaintext">
+{`
 wq
 112
+`}
 </SyntaxHighlighter>
 
 ed also has a delete command. Let's say that, for whatever reason, we
@@ -123,12 +145,14 @@ want to delete the inner contents of the main block. Then we can use
 the d command:
 
 <SyntaxHighlighter language="plaintext">
+{`
 ed hello.c
 112
-?main?+1,?^}?-1d
+?main?+1,?^\}?-1d
 ?main?+1,.p
 int main(void) \{
-}
+\}
+`}
 </SyntaxHighlighter>
 
 We end up on the closing brace of the main block by deleting its inner
@@ -136,13 +160,14 @@ contents. To undo a command, we can use the u command, which stands
 for undo.
 
 <SyntaxHighlighter language="plaintext">
+{`
 u
 ?main?,.p
 int main(void) \{
     puts("Hello, world!");
     return EXIT_SUCCESS;
 \}
-
+`}
 </SyntaxHighlighter>
 
 There are a few more useful commands for the ed editor, but I think
