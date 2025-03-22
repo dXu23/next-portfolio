@@ -1,9 +1,11 @@
 .App {
-    height: auto;
+  height: auto;
+  margin-top: 0;
+  padding-top: 1px;
 }
 
 .content {
-    margin: 8em auto 1em auto;
-    padding-top: 5em;
-    width: 85%;
+  margin: calc(var(--sticky-header-desktop-height) + 2em) auto 1em auto;
+  padding-top: 1.5em;
+  width: 85%;
 }

@@ -1,9 +1,8 @@
 ---
 title: How to use the Standard Editor ed
-date: 'March 20, 20225'
+date: "March 20, 20225"
 description: Some tips on how to use the standard editor ed
-thumbnailUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/2e/Ed_lines.jpg'
-tags: ['textediting']
+tags: ["textediting"]
 ---
 
 ed, commonly referred to as the standard editor, is a very early text
@@ -31,8 +30,8 @@ a
 #include \<stdio.h\>
 
 int main(void) {
-    printf("Hello, world!\n");
-    return 0;
+printf("Hello, world!\n");
+return 0;
 }
 
 .
@@ -42,11 +41,13 @@ q
 $ ls
 hello.c
 `}
+
 </SyntaxHighlighter>
 
 Of course, we can compile the C program:
+
 <SyntaxHighlighter language="plaintext">
-{`
+  {`
 $ cc -o hello hello.c
 $ ./hello
 Hello, world!
@@ -58,25 +59,28 @@ incorrect, could be thought of as somewhat not cross-compatible. Let's
 fix that.
 
 To edit hello.c, we can type
+
 <SyntaxHighlighter language="plaintext">
-{`
+  {`
 ed hello.c
 `}
 </SyntaxHighlighter>
 
 To print the current line, we can then type
+
 <SyntaxHighlighter language="plaintext">
 {`
 p
 
 `}
+
 </SyntaxHighlighter>
 
 It turns out that ed starts at the very last line. To go to the first
 line, as well as print it, we can type
 
 <SyntaxHighlighter language="plaintext">
-{`
+  {`
 1p
 #include \<stdio.h\>
 `}
@@ -87,24 +91,24 @@ the t command. The following copies the line we are
 currently on, and then pastes it below the current line.
 
 <SyntaxHighlighter language="plaintext">
-{`
+  {`
 .t.
 `}
 </SyntaxHighlighter>
 
 If we want to change the current line, then we can use the substitute
-command. This will feel very familiar to fans of *nix OSes who have
+command. This will feel very familiar to fans of \*nix OSes who have
 used sed before.
 
 <SyntaxHighlighter language="plaintext">
-{`
+  {`
 s/io/lib/n
 2       #include \<stdlib.h\>
 `}
 </SyntaxHighlighter>
 
 <SyntaxHighlighter language="plaintext">
-{`
+  {`
 /printf/s//puts/n
 5       puts("Hello, world\n");
 `}
@@ -115,7 +119,7 @@ outputs a new line after it prints a string to standard output, so we
 can do away with it via the following command:
 
 <SyntaxHighlighter language="plaintext">
-{`
+  {`
 s/\\n//p
     puts("Hello, world");
 `}
@@ -126,7 +130,7 @@ operating systems. To make our C program as compatible as possible,
 one merely has to type
 
 <SyntaxHighlighter language="plaintext">
-{`
+  {`
 /0/s//EXIT_SUCCESS/p
 `}
 </SyntaxHighlighter>
@@ -134,7 +138,7 @@ one merely has to type
 To save and quit a file simultaneously, the "wq" command can be used:
 
 <SyntaxHighlighter language="plaintext">
-{`
+  {`
 wq
 112
 `}
@@ -145,7 +149,7 @@ want to delete the inner contents of the main block. Then we can use
 the d command:
 
 <SyntaxHighlighter language="plaintext">
-{`
+  {`
 ed hello.c
 112
 ?main?+1,?^\}?-1d
@@ -160,7 +164,7 @@ contents. To undo a command, we can use the u command, which stands
 for undo.
 
 <SyntaxHighlighter language="plaintext">
-{`
+  {`
 u
 ?main?,.p
 int main(void) \{
@@ -174,6 +178,6 @@ There are a few more useful commands for the ed editor, but I think
 that this is a good overview of some basic commands. Here are some
 more resources on using the ed editor:
 
- - [Batch editing files with ed](https://jvns.ca/blog/2018/05/11/batch-editing-files-with-ed/)
- - [The GNU ed line editor](https://www.gnu.org/software/ed/manual/ed_manual.html)
- - [Ed Mastery](https://www.tiltedwindmillpress.com/product/ed/)
+- [Batch editing files with ed](https://jvns.ca/blog/2018/05/11/batch-editing-files-with-ed/)
+- [The GNU ed line editor](https://www.gnu.org/software/ed/manual/ed_manual.html)
+- [Ed Mastery](https://www.tiltedwindmillpress.com/product/ed/)

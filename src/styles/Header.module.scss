@@ -4,6 +4,8 @@
   width: 100%;
   background-color: var(--background);
   border-bottom: 1px solid var(--theme-magenta);
+  padding-top: 1px;
+  margin-bottom: 0;
 }
 
 .header {
@@ -11,6 +13,7 @@
   width: 100%;
   opacity: 1;
   top: 0;
+  height: var(--sticky-header-desktop-height);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -43,7 +46,6 @@
 }
 
 .myLogo {
-  height: 60%;
   align-self: center;
 }
 
