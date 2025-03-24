@@ -8,6 +8,7 @@ import { BsGearFill } from "react-icons/bs";
 import React from "react";
 
 import SettingsPicker from "./SettingsPicker";
+import Logo from "./Logo";
 
 const poppins = Poppins({
   weight: "400",
@@ -34,14 +35,7 @@ export default function Header() {
     <div className={styles.holder}>
       <SettingsPicker hidden={settingsHidden} />
       <header className={poppins.className + " " + styles.header} role="banner">
-        <Image
-          src="/logo.svg"
-          alt="My Logo"
-          className={styles.myLogo}
-          width={150}
-          height={60}
-          priority
-        />
+        <Logo />
         <div className={styles.headerEnd}>
           <nav
             role="navigation"
