@@ -13,3 +13,12 @@
   gap: 3em;
 }
 
+.filters {
+  display: grid;
+  padding: 0.8em 0;
+  grid-template-columns: repeat(auto-fill, minmax(min(24rem, 100%), 1fr));
+}
+
+.filter > input {
+  margin-right: 6px;
+}
