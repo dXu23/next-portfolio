@@ -23,7 +23,7 @@ export default function Home() {
               <div id={styles["animated-logo__text"]}>
                 <p id={styles["name"]}>Daniel X</p>
                 <span id={styles["D"]}>D</span>
-                <p id={styles["info"]}>Front End Dev | Chicago, IL</p>
+                <p id={styles["info"]}>IT Support | Chicago, IL</p>
               </div>
             </div>
             <div id={styles.icons}>
@@ -53,9 +53,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <p className={styles.intro}>
-            I develop and design user experiences to meet their needs and wants.
-          </p>
+          <p className={styles.intro}>I do IT support.</p>
         </main>
       </Base>
     </>
